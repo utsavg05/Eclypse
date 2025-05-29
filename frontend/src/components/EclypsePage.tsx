@@ -76,22 +76,13 @@ const EclypsePage: React.FC = () => {
 
                 {/* Video element */}
                 <video
-                  src="./public/4937472-uhd_4096_2160_25fps.mp4"
+                  src="/4937472-uhd_4096_2160_25fps.mp4"
                   autoPlay
                   muted
                   loop
                   playsInline
                   className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
                 />
-
-                {/* Play button overlay */}
-                {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
-                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div> */}
 
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -140,7 +131,7 @@ const EclypsePage: React.FC = () => {
           <div className="col-span-2  h-100aspect-video rounded-lg overflow-hidden">
             <div className="w-full h-full flex items-center justify-center">
               <span className="text-gray-400">
-                <video src='./public/4937472-uhd_4096_2160_25fps.mp4'
+                <video src='/4937472-uhd_4096_2160_25fps.mp4'
                   autoPlay
                   muted
                   loop
@@ -174,7 +165,7 @@ const EclypsePage: React.FC = () => {
 
           {/* Yin-yang symbol */}
           <div className=" bg-black rounded-lg overflow-hidden flex items-center justify-center">
-            <img className='' src="./public/204b51ca3d6365117ecab61115aa49089a454cda (1).jpg" alt="eclypse" />
+            <img className='' src="/204b51ca3d6365117ecab61115aa49089a454cda (1).jpg" alt="eclypse" />
           </div>
         </div>
 
