@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast';
 
 import EclypsePage from './components/EclypsePage'
 import EclypseCartPage from './components/EclypseCartPage'
@@ -20,6 +21,7 @@ function App() {
 
   return (
      <div>
+      <Toaster position="top-right" reverseOrder={false} />
       <RouterProvider router={appRouter} />
     </div>
   )

@@ -19,9 +19,9 @@ const EclypsePage: React.FC = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="relative min-h-screen px-10 bg-black text-white font-sans">
+    <div className="relative min-h-screen px-10 bg-black text-white font-sans pt-[80px]">
       {/* Navigation Header */}
-      <nav className={`fixed top-0 flex w-full z-50 justify-between items-center px-20 py-2 mb-23 ${scrolled ? ' bg-black/70 backdrop-blur-md' : null}`}>
+      <nav className={`fixed top-0 flex w-full z-50 justify-between items-center px-20 py-4 ${scrolled ? ' bg-black/70 backdrop-blur-md' : null}`}>
         {/* Logo */}
         <div className="flex items-center">
           <div className="w-22 h-22 rounded-lg flex items-center justify-center mr-4 cursor-pointer">

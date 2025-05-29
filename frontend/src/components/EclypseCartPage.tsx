@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+
 
 const EclypseCartPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,14 +32,37 @@ const EclypseCartPage: React.FC = () => {
     });
   };
 
-  const handleSaveAddress = () => {
-    // Handle save address logic
-    console.log('Saving address:', formData);
-  };
+  const handleSaveAddress = async () => {
+  try {
+    const response = await fetch('http://localhost:5000/api/address', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      toast.success('Address saved successfully!');
+    } else {
+      toast.error(data.message || 'Failed to save address.');
+    }
+  } catch (error) {
+    console.error('Error saving address:', error);
+    toast.error('Failed to save address. Please try again.');
+  }
+};
+
 
   const handlePlaceOrder = () => {
     // Handle place order logic
     console.log('Placing order...');
+    toast.success('Order placed successfully!');
+    setTimeout(() => {
+      navigate('/');
+    }, 2000)
   };
 
   const navigate = useNavigate()
