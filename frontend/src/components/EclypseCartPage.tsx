@@ -58,8 +58,8 @@ const EclypseCartPage: React.FC = () => {
 
   const handlePlaceOrder = () => {
     // Handle place order logic
-    console.log('Placing order...');
-    toast.success('Order placed successfully!');
+    toast.success('Order placed successfully! Thank you for your purchase.');
+    // Redirect to home page after 2 seconds
     setTimeout(() => {
       navigate('/');
     }, 2000)
